@@ -2,7 +2,7 @@
 // Porta do stream_resolver.py do addon Kodi ParkStream (GPL-2.0).
 
 const IMDB_ID = "tt0121955"; // South Park
-const REGION = process.env.REGION || "br"; // en, es, de, se, eu, br, lat
+const REGION = process.env.REGION || "eu"; // en, es, de, se, eu, br, lat
 const UA = "Mozilla/5.0 (Windows NT 6.1; rv:25.0) Gecko/20100101 Firefox/25.0";
 const DATA_URL = (r) =>
   `https://raw.githubusercontent.com/wargio/plugin.video.southpark_unofficial/addon-data/addon-data-${r}.json`;
