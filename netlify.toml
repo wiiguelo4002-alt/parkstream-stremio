@@ -1,1 +1,18 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/manifest.json"
+  to = "/.netlify/functions/addon?route=manifest"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/stream/series/*"
+  to = "/.netlify/functions/addon?route=stream&id=:splat"
+  status = 200
+  force = true
