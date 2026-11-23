@@ -42,7 +42,7 @@ async function getJson(url) {
   const timer = setTimeout(() => ctl.abort(), 8000);
   try {
     const res = await fetch(url, { headers: { "User-Agent": UA }, signal: ctl.signal });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} em ${url}`);
     return JSON.parse(await res.text());
   } finally {
     clearTimeout(timer);
